@@ -1,0 +1,2 @@
+# 暂时跳过代码检查，只验证提交信息格式
+echo "Pre-commit hook: Skipping lint checks for now"

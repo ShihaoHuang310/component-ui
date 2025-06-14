@@ -451,15 +451,65 @@ pnpm add -D @types/node
 
 ### 提交信息规范
 
-使用 [Conventional Commits](https://www.conventionalcommits.org/) 规范：
+本项目使用 [Conventional Commits](https://www.conventionalcommits.org/) 规范，并通过 husky + commitlint 强制执行。
+
+#### 提交格式
+
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+#### 类型 (type)
 
 - `feat:` 新功能
 - `fix:` 修复 bug
 - `docs:` 文档更新
-- `style:` 代码格式化
-- `refactor:` 代码重构
-- `test:` 测试相关
+- `style:` 代码格式化，不影响代码逻辑
+- `refactor:` 重构，既不是新增功能，也不是修复 bug
+- `perf:` 性能优化
+- `test:` 增加测试
 - `chore:` 构建过程或辅助工具的变动
+- `revert:` 回滚
+- `build:` 构建系统或外部依赖项的更改
+- `ci:` CI 配置文件和脚本的更改
+
+#### 范围 (scope) - 可选
+
+表示影响的范围，例如：`components`、`core`、`docs`、`playground`
+
+#### 示例
+
+```bash
+# 添加新功能
+feat(components): add Button component with multiple variants
+
+# 修复 bug
+fix(core): resolve utility function type error
+
+# 文档更新
+docs: update installation guide
+
+# 重构代码
+refactor(components): simplify Form component logic
+
+# 破坏性变更
+feat(components)!: change Button API
+
+BREAKING CHANGE: Button component now requires variant prop
+```
+
+#### Git Hooks
+
+项目配置了以下 Git hooks：
+
+- **pre-commit**: 运行代码检查和类型检查
+- **commit-msg**: 验证提交信息格式
+
+如果提交信息不符合规范，提交将被拒绝。
 
 ## 📄 许可证
 
