@@ -1,0 +1,52 @@
+{
+  "name": "@mattverse-ui/components",
+  "version": "0.1.0",
+  "description": "Vue 3 components for mattverse-ui",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "keywords": [
+    "vue",
+    "components",
+    "ui"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.4.19",
+    "vue-tsc": "^1.8.27"
+  },
+  "dependencies": {
+    "@mattverse-ui/core": "workspace:*",
+    "@vee-validate/zod": "^4.12.5",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "gsap": "^3.12.5",
+    "lucide-vue-next": "^0.344.0",
+    "radix-vue": "^1.4.9",
+    "tailwind-merge": "^2.2.1",
+    "vee-validate": "^4.12.5",
+    "zod": "^3.22.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
